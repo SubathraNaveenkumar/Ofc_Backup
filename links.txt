@@ -1,0 +1,36 @@
+Sync & Async :--
+
+https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff
+
+Es5 to Es 6 :-
+
+https://engineering.carsguide.com.au/es5-vs-es6-syntax-6c8350fa6998
+
+es6 feature: -
+
+http://blog.thefirehoseproject.com/posts/12-reasons-es6-future-javascript-web-development/
+
+call stack: - (aync)
+
+https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf
+
+V8 Engine:- 
+
+https://blog.logrocket.com/how-javascript-works-optimizing-the-v8-compiler-for-efficiency/
+
+https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf
+
+https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e
+
+
+https://www.freecodecamp.org/news/javascript-essentials-why-you-should-know-how-the-engine-works-c2cc0d321553/
+
+Arry Methods
+
+https://medium.com/@js_tut/map-filter-and-reduce-animated-7fe391a35a47
+
+
+
+
+
+

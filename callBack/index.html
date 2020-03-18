@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Js_Exercise</title>
+
+</head>
+
+<body>
+    Sample doc..
+    <p id='filter-array'></p>
+    <p id='sort-array-asc'></p>
+    <p id='sort-array-des'></p>
+    <p id='sort-array-string'></p>
+    <p class="fun-map"></p>
+    <div id='dync-table'></div>
+
+    <hr />
+    <div>
+        <h3>Dialog box...</h3>
+        <div>
+            <p>Click the button you get alert..!</p>
+            <button onclick='showAlert()'>Click Here!</button>
+            <p class='alert-popup'></p>
+        </div>
+
+        <div>
+            <p>Click the button you wil get confirmation..!</p>
+            <button onclick='showConfrm()'>Click Me</button>
+            <p class='confrm-popup'></p>
+        </div>
+
+        <div>
+            <p>Click the button u wil get prompt(user's input..)</p>
+            <button onclick='showPrompt()'>Click..!</button>
+            <p class='prompt-popup'></p>
+        </div>
+    </div>
+
+    <hr />
+    <div>
+        <h3>Page Direct</h3>
+        <div>
+            <p>Click the button (page direct)</p>
+            <button onclick='pageDirect()'>Click me..!</button>
+        </div>
+        <div>
+            <p>Click the button (page direct: Replace)</p>
+            <button onclick='pageDirectReplace()'>Click me..!</button>
+        </div>
+        <div>
+            <p>Click the button (page direct: Assign)</p>
+            <button onclick='pageDirectAssign()'>Click me..!</button>
+        </div>
+    </div>
+
+    <hr />
+    <div>
+        <h3>Array Methods</h3>
+        <div>
+            <h4>Array concat()</h4>
+            <p>Compare to arrays or values</p>
+            <p id='arr-concat'></p>
+        </div>
+        <div>
+            <h4>Array every()</h4>
+            <p>Check every element, pass the test condition..</p>
+            <p id='arr-every'></p>
+            <button onclick='displayResults()'>Array every()</button>
+        </div>
+        <div>
+            <h4>Array indexOf()</h4>
+            <p>Find the index position, if it is not there(-1)</p>
+            <p id='arr-indexOf'></p>
+        </div>
+        <div>
+            <h4>Array join()</h4>
+            <p>Join- use separater(+ , _ default ',')</p>
+            <p id='arr-join'></p>
+        </div>
+        <div>
+            <h4>Array lastindexOf()</h4>
+            <p>Find the last index position [8,2,3,4,5,2,3,8], 3 pos: 6 if it is not there(-1)</p>
+            <p id='arr-lastIndexOf'></p>
+        </div>
+        <div>
+            <h4>Array Map</h4>
+            <p>Creates a new array passes the test condition</p>
+            <p id='arr-map'></p>
+        </div>
+        <div>
+            <h4>Array Push / unshift</h4>
+            <p>Insert a item at the end of array</p>
+            <p>Insert a item at the begining of array</p>
+            <p id='arr-push'></p>
+        </div>
+        <div>
+            <h4>Array Pop / shift</h4>
+            <p>Remove a item at the end of array</p>
+            <p>Remove a item at the begining of array</p>
+            <p id='arr-pop'></p>
+        </div>
+        <div>
+            <h4>Array Reduce Left to right</h4>
+            <p>Two or more than values reduced to- single value</p>
+            <p id='arr-reduce'></p>
+        </div>
+        <div>
+            <h4>Array ReduceRight</h4>
+            <p>(right to left) Two or more than values reduced to- single value</p>
+            <p id='arr-reduceRight'></p>
+        </div>
+    </div>
+
+    <hr />
+    <button onclick='displayFilterVal()'>Check Array Methods</button>
+    <script src='js/main.js'></script>
+    <script src='js/string_ex.js'></script>
+    <script src='js/dyncTable.js'></script>
+    <script src='js/dialogBox.js'></script>
+    <script src='js/pageDirect.js'></script>
+    <script src='js/arrayMethods.js'></script>
+</body>
+
+<script>
+
+    var samArray = [10, 15, 2, 7, 3];
+    var sortArray = ['zee', 'bee', 'cee'];
+    var arrVal = new Array(4);
+    var sampleForEach = new Array(15, 36, 21, 0, 20);
+
+    function exampleFilter(sam) {
+        return sam >= 7
+    }
+
+    function displayFilterVal() {
+        document.getElementById('sort-array-asc').innerHTML = samArray.sort(function (a, b) { return a - b });
+        document.getElementById('sort-array-des').innerHTML = samArray.sort(function (a, b) { return b - a });
+        sortArray.sort();
+        sortArray.reverse();
+        sortArray.sort();
+        document.getElementById('sort-array-string').innerHTML = sortArray;
+        document.getElementById('filter-array').innerHTML = samArray.filter(exampleFilter);
+
+        for (var i = 0; i < arrVal.length; i++) {
+            arrVal[i] = i * 2;
+        }
+        console.log('Split array values', arrVal);
+
+        sampleForEach.forEach(function (val) {
+            console.log('using foreach', val);
+        })
+
+        sampleForEach.sort();
+
+        console.log('For each After sorting', sampleForEach) //ott  working...ssss
+    }
+
+</script>
+
+</html>
